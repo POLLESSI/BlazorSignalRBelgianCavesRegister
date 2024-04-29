@@ -1,0 +1,21 @@
+﻿@page "/cavequestionner"
+@using BlazorSignalRBelgianCavesRegister.Client.Pages.Shared
+@using BlazorSignalRBelgianCavesRegister.Client.Shared;
+
+<h3>Cave Questionner</h3>
+
+@if (QuestionnaireFini)
+{
+    <h5>Questionnaire fini ! </h5>
+    <h5>@BonnesResponses Good Responses to @QuestionActuelle</h5>
+
+    <button @onclick="RestartGame">Restart</button>
+}
+else
+{
+    <QuestionComponent ResponseEvent="RecevoirResponse" UserName="Union Belge de Spéléologie" Question="Questions[QuestionActuelle + 1]"></QuestionComponent> 
+}
+
+@code {
+
+}

@@ -1,0 +1,57 @@
+﻿<h3>Site Create</h3>
+
+<EditForm Model="siteform" OnSubmit="submit" class="form-control">
+    <div>
+        <label>Site Name : </label>
+        <InputText @bind-Value="siteform.Site_Name"></InputText>
+    </div>
+    <div>
+        <label>Site Description : </label>
+        <InputText @bind-Value="siteform.Site_Description"></InputText>
+    </div>
+    <div>
+        <label>Latitude : </label>
+        <InputText @bind-Value="siteform.Latitude"></InputText>
+    </div>
+    <div>
+        <label>Longitude : </label>
+        <InputText @bind-Value="siteform.Longitude"></InputText>
+    </div>
+    <div>
+        <label>Length : </label>
+        <InputText @bind-Value="siteform.Length"></InputText>
+    </div>
+    <div>
+        <label>Depth : </label>
+        <InputText @bind-Value="siteform.Depth"></InputText>
+    </div>
+    <div>
+        <label>Access Requirement : </label>
+        <InputText @bind-Value="siteform.AccessRequirement"></InputText>
+    </div>
+    <div>
+        <label>Practical Information : </label>
+        <InputText @bind-Value="siteform.PracticalInformation"></InputText>
+    </div>
+    <div>
+        <label>Id Lambda Data : </label>
+        <InputNumber @bind-Value="siteform.DonneesLambda_Id"></InputNumber>
+    </div>
+    <div>
+        <label>Id Owner : </label>
+        <InputNumber @bind-Value="siteform.NOwner_Id"></InputNumber>
+    </div>
+    <div>
+        <label>Id Scientific Data : </label>
+        <InputNumber @bind-Value="siteform.ScientificData_Id"></InputNumber>
+    </div>
+    <div>
+        <label>Id Bibliography : </label>
+        <InputNumber @bind-Value="siteform.Bibliography_Id"></InputNumber>
+    </div>
+    <button type="submit" button="btn btn-success">Submit</button>
+</EditForm>
+
+@code {
+
+}

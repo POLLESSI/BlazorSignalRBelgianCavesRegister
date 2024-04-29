@@ -1,0 +1,33 @@
+﻿<h3>LambdaData Create</h3>
+
+<EditForm Model="lambdaDataform" OnSubmit="submit" class="form-control">
+    <div class="form-control-sm">
+        <label>Localisation : </label>
+        <InputText @bind-Value="lambdaDataform.Localisation"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Topo : </label>
+        <InputText @bind-Value="lambdaDataform.Topo"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Acces : </label>
+        <InputText @bind-Value="lambdaDataform.Acces"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>EquipementSheet : </label>
+        <InputText @bind-Value="lambdaDataform.EquipementSheet"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>PracticalInformation : </label>
+        <InputText @bind-Value="lambdaDataform.PracticalInformation"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Description : </label>
+        <InputText @bind-Value="lambdaDataform.Description"></InputText>
+    </div>
+    <button type="submit" button="btn btn-success">Submit</button>
+</EditForm>
+
+@code {
+
+}

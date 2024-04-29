@@ -1,0 +1,30 @@
+﻿@page "/nuser"
+@using BlazorSignalRBelgianCavesRegister.Client.Models
+
+<h3>User List</h3>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Nick Name</th>
+        <th></th>
+    </tr>
+    @foreach (NUserModel num in NUserList)
+    {
+        <tr>
+            <td>@num.Pseudo</td>
+            <td><button class="btn btn-sm btn-outline-info" @onclick="() => ClickInfo(num.NUser_Id)">Info</button></td>
+        </tr>
+    }
+</table>
+
+<hr />
+
+@if(SelectedNUserId > 0)
+{
+    <NUserDetail NUser_Id="SelectedNUserId"></NUserDetail>
+}
+
+<hr />
+
+@code {
+
+}

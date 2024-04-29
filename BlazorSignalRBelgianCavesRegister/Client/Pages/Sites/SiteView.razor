@@ -1,0 +1,29 @@
+﻿@page "/site"
+@using BlazorSignalRBelgianCavesRegister.Client.Models
+
+<h3>Site List</h3>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Site name</th>
+        <th></th>
+    </tr>
+    @foreach (SiteModel sm in SiteList)
+    {
+        <tr>
+            <td>@sm.Site_Name</td>
+            <td><button class="btn btn-sm btn-outline-info" @onclick="() => ClickInfo(sm.Site_Id)">Info</button></td>
+        </tr>
+    }
+</table>
+
+<hr />
+@if(SelectedSiteId > 0)
+{
+    <SiteDetail Site_Id="SelectedSiteId"></SiteDetail>
+}
+
+<hr />
+
+@code {
+
+}

@@ -1,0 +1,85 @@
+﻿page {
+    background-color: lightgreen;
+    position: absolute;
+    top: 500%;
+}
+body {
+    background: url("Pictures/Spéléo1.jpg") fixed no-repeat center;
+}
+
+h1 {
+    position: relative;
+    left: 30%;
+}
+
+h5 {
+    position: relative;
+    left: 30%;
+    top: 200px;
+}
+
+p {
+    position: relative;
+    left: 30%;
+}
+
+strong {
+    background-color: darkseagreen;
+    color: darkorange;
+    font-family: Algerian;
+    font-size: div
+
+{
+    font-size: 60px
+}
+
+;
+}
+
+SurveyPrompt {
+    position: relative;
+    left: 30%;
+}
+
+.text-center {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+    .text-center h1 {
+        text-align: center;
+    }
+
+    .text-center p {
+        text-align: center;
+        position: relative;
+        left: 30%;
+        top: 20%;
+    }
+
+button {
+    background-color: rgb(18, 16, 36);
+    position: relative;
+    top: 450px;
+    left: 32%;
+    color: antiquewhite;
+    width: 200px;
+    height: 45px;
+    border-radius: 10px, 5px, 10px, 5px;
+    box-shadow: 6px 6px 6px black inset;
+    text-shadow: 2px 2px 4px black;
+    text-align: justify;
+    border: 1px solid black;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+    button:hover {
+        text-decoration: underline;
+        color: limegreen;
+    }
+
+    button:checked {
+        background-color: chartreuse;
+    }

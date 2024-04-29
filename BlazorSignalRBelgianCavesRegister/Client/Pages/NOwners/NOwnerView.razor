@@ -1,0 +1,29 @@
+﻿@page "/nowner"
+@using BlazorSignalRBelgianCavesRegister.Client.Models
+
+<h3>NOwner List</h3>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Status</th>
+        <th></th>
+    </tr>
+    @foreach (NOwnerModel no in NOwnerList)
+    {
+        <tr>
+            <td>@no.Status</td>
+            <td><button class="btn btn-sm btn-outline-info" @onclick="() => ClickInfo(no.NOwner_Id)">Info</button></td>
+        </tr>
+    }
+</table>
+
+<hr />
+@if(SelectedOwnerId > 0)
+{
+    <NOwnerDetail NOwner_Id="SelectedOwnerId"></NOwnerDetail>
+}
+
+<hr />
+
+@code {
+
+}

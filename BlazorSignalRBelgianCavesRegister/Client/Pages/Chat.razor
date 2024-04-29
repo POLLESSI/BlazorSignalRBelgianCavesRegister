@@ -1,0 +1,22 @@
+﻿@page "/chat"
+@using BlazorSignalRBelgianCavesRegister.Client.Models;
+
+<h3>Chat Room</h3>
+Author : <input type="text" @bind-value="Author" />
+Message : <input type="text" @bind-value="newMessage" />
+<button class="btn btn-success btn-sm" @onclick="EnvoiMessage">Send</button>
+<button class="btn btn-info btn-lg">Join</button>
+<button class="btn btn-outline-danger col-sm-6" @onclick="SendToGroup">Group</button>
+
+<hr />
+<h4>Message</h4>
+<ul>
+    @foreach (Message m in ListeMessages)
+    {
+        <li>@m.Author - @m.Content</li>
+    }
+</ul>
+
+@code {
+
+}

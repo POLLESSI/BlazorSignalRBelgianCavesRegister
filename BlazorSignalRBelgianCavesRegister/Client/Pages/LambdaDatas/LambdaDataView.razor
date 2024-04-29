@@ -1,0 +1,29 @@
+﻿@page "/lambdadata"
+@using BlazorSignalRBelgianCavesRegister.Client.Models
+
+<h3>LambdaData List</h3>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Localisation</th>
+        <th></th>
+    </tr>
+    @foreach (LambdaDataModel ldm in LambdaDataList)
+    {
+        <tr>
+            <td>@ldm.Localisation</td>
+            <td><button class="btn btn-sm btn-outline-info" @onclick="() => ClickInfo(ldm.DonneesLambda_Id)">Info</button></td>
+        </tr>
+    }
+</table>
+
+<hr />
+@if(SelectedLambdaId > 0)
+{
+    <LambdaDataDetail DonneesLambda_Id="SelectedLambdaId"></LambdaDataDetail>
+}
+<hr />
+
+@code {
+
+}
+ 

@@ -1,0 +1,29 @@
+﻿<h3>Bibliography Create</h3>
+
+<EditForm Model="bibliographyform" OnSubmit="submit" class="form-control">
+    <div class="form-control-sm">
+        <label>Title : </label>
+        <InputText @bind-Value="bibliographyform.Title"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Author : </label>
+        <InputText @bind-Value="bibliographyform.Author"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>ISBN : </label>
+        <InputText @bind-Value="bibliographyform.ISBN"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Data Type : </label>
+        <InputText @bind-Value="bibliographyform.DataType"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Details : </label>
+        <InputText @bind-Value="bibliographyform.Detail"></InputText>
+    </div>
+    <button type="submit" button="btn btn-success">Submit</button>
+</EditForm>
+
+@code {
+
+}

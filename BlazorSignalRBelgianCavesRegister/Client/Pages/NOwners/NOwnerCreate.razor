@@ -1,0 +1,16 @@
+﻿<h3>New Owner Create</h3>
+<EditForm Model="nownerform" OnSubmit="submit" class="form-control">
+    <div class="form-control-sm">
+        <label>Status : </label>
+        <InputText @bind-Value="nownerform.Status"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Agreement : </label>
+        <InputText @bind-Value="nownerform.Agreement"></InputText>
+    </div>
+    <button type="submit" button="btn btn-success">Submit</button>
+</EditForm>
+
+@code {
+
+}

@@ -1,0 +1,20 @@
+﻿<h3>NPersonDetail</h3>
+
+@if(CurrentNPerson is not null)
+{
+    <p>Last Name : @CurrentNPerson.Lastname</p>
+    <p>First Name : @CurrentNPerson.Firstname</p>
+    <p>BirthDate : @CurrentNPerson.BirthDate</p>
+    <p>Email : @CurrentNPerson.Email</p>
+    <p>Address Street : @CurrentNPerson.Address_Street</p>
+    <p>Address Nbr : @CurrentNPerson.Address_Nbr</p>
+    <p>Postal Code : @CurrentNPerson.PostalCode</p>
+    <p>Address City : @CurrentNPerson.Address_City</p>
+    <p>Address Country : @CurrentNPerson.Address_Country</p>
+    <p>Telephone : @CurrentNPerson.Telephone</p>
+    <p>Gsm : @CurrentNPerson.Gsm</p>
+}
+
+@code {
+
+}

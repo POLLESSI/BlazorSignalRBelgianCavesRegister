@@ -1,0 +1,32 @@
+﻿<h3>Weather Forecast Create</h3>
+<EditForm Model="weatherforecastform" OnSubmit="submit" class="form-control">
+    <div>
+        <label>Date : </label>
+        <InputDate @bind-Value="weatherforecastform.Date"></InputDate>
+    </div>
+    <div>
+        <label>Temperature C° : </label>
+        <InputText @bind-Value="weatherforecastform.TemperatureC"></InputText>
+    </div>
+    <div>
+        <label>Summary : </label>
+        <InputText @bind-Value="weatherforecastform.Summary"></InputText>
+    </div>
+    <div>
+        <label>Description : </label>
+        <InputText @bind-Value="weatherforecastform.Description"></InputText>
+    </div>
+    <div>
+        <label>Humidity : </label>
+        <InputText @bind-Value="weatherforecastform.Humidity"></InputText>
+    </div>
+    <div>
+        <label>Precipitation : </label>
+        <InputText @bind-Value="weatherforecastform.Precipitation"></InputText>
+    </div>
+    <button type="submit" button="btn btn-success">Submit</button>
+</EditForm>
+
+@code {
+
+}

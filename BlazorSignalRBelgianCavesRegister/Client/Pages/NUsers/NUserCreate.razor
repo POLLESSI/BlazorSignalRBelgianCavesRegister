@@ -1,0 +1,28 @@
+﻿<h3>User Create</h3>
+
+<EditForm Model="nuserform" OnSubmit="submit" class="form-control">
+    <div class="form-control-sm">
+        <label>Nick Name : </label>
+        <InputText @bind-Value="nuserform.Pseudo"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Password : </label>
+        <InputText @bind-Value="nuserform.PasswordHash"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Email : </label>
+        <InputText @bind-Value="nuserform.Email"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Id Person : </label>
+        <InputNumber @bind-Value="nuserform.NPerson_Id"></InputNumber>
+    </div>
+    <div class="form-control-sm">
+        <label>Rôle Id : </label>
+        <InputText @bind-Value="nuserform.Role_Id"></InputText>
+    </div>
+</EditForm>
+
+@code {
+
+}

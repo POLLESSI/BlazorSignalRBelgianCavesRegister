@@ -1,0 +1,16 @@
+﻿<h3>Weather Forecast Detail</h3>
+
+@if (CurrentWeatherForecast is not null)
+{
+    <p>Date : @CurrentWeatherForecast.Date</p>
+    <p>Temperature C° : @CurrentWeatherForecast.TemperatureC</p>
+    <p>Temperature F° : @CurrentWeatherForecast.TemperatureF</p>
+    <p>Summary : @CurrentWeatherForecast.Summary</p>
+    <p>Description : @CurrentWeatherForecast.Description</p>
+    <p>Hummidity : @CurrentWeatherForecast.Humidity</p>
+    <p>Precipitation : @CurrentWeatherForecast.Precipitation</p>
+}
+
+@code {
+
+}

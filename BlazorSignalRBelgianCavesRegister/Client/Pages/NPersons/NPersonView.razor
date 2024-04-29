@@ -1,0 +1,31 @@
+﻿@page "/nperson"
+@using BlazorSignalRBelgianCavesRegister.Client.Models
+
+<h3>Person List</h3>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Lastname</th>
+        <th>Firstname</th>
+        <th></th>
+    </tr>
+    @foreach (NPersonModel npm in NPersonList)
+    {
+        <tr>
+            <td>@npm.Lastname</td>
+            <td>@npm.Firstname</td>
+            <td><button class="btn btn-sm btn-outline-info" @onclick="() => ClickInfo(npm.NPerson_Id)">Info</button></td>
+        </tr>
+    }
+</table>
+
+<hr />
+@if(SelectedNPersonId > 0)
+{
+    <NPersonDetail NPerson_Id="SelectedNPersonId"></NPersonDetail>
+}
+
+<hr />
+
+@code {
+
+}

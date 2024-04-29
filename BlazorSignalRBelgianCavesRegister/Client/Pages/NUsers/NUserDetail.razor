@@ -1,0 +1,14 @@
+﻿<h3>User Detail</h3>
+
+@if(CurrentNUser is not null)
+{
+    <p>Nick Name : @CurrentNUser.Pseudo</p>
+    <p>Password : @CurrentNUser.PasswordHash</p>
+    <p>Email : @CurrentNUser.Email</p>
+    <p>Person Id : @CurrentNUser.NPerson_Id</p>
+    <p>Rôle Id : @CurrentNUser.Role_Id</p>
+}
+
+@code {
+
+}

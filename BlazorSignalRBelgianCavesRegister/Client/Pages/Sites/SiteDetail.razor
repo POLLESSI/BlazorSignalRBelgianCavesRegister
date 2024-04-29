@@ -1,0 +1,21 @@
+﻿<h3>Site Detail</h3>
+
+@if (CurrentSite is not null)
+{
+    <p>Site Name : @CurrentSite.Site_Name</p>
+    <p>Site Description : @CurrentSite.Site_Description</p>
+    <p>Latitude : @CurrentSite.Latitude</p>
+    <p>Longitude : @CurrentSite.Longitude</p>
+    <p>Length : @CurrentSite.Length</p>
+    <p>Depth : @CurrentSite.Depth</p>
+    <p>Access Requirement : @CurrentSite.AccessRequirement</p>
+    <p>Practical Information : @CurrentSite.PracticalInformation</p>
+    <p>Lambda Data Id : @CurrentSite.DonneesLambda_Id</p>
+    <p>Id Owner : @CurrentSite.NOwner_Id</p>
+    <p>Id Scientific Data : @CurrentSite.ScientificData_Id</p>
+    <p>Id Bibliography : @CurrentSite.Bibliography_Id</p>
+}
+
+@code {
+
+}

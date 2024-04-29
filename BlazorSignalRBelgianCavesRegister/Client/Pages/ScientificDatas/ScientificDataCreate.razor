@@ -1,0 +1,20 @@
+﻿<h3>Scientific Data Create</h3>
+<EditForm Model="scientificDataform" OnSubmit="submit" class="form-control">
+    <div class="form-control-sm">
+        <label>Data Type : </label>
+        <InputText @bind-Value="scientificDataform.DataType"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Data Details : </label>
+        <InputText @bind-Value="scientificDataform.DetailsData"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Data Reference : </label>
+        <InputText @bind-Value="scientificDataform.ReferenceData"></InputText>
+    </div>
+    <button type="submit" button="btn btn-success">Submit</button>
+</EditForm>
+
+@code {
+
+}
