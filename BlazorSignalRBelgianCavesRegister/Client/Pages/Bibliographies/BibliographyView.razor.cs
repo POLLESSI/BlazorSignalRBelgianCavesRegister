@@ -8,12 +8,13 @@ namespace BlazorSignalRBelgianCavesRegister.Client.Pages.Bibliographies
 {
     public partial class BibliographyView
     {
+    #nullable disable
         [Inject]
-        public HttpClient? Client { get; set; }
+        public HttpClient Client { get; set; }
 
-        public HubConnection? hubConnection { get; set; }
+        public HubConnection hubConnection { get; set; }
 
-        public List<BibliographyModel>? BibliographyList { get; set; }
+        public List<BibliographyModel> BibliographyList { get; set; }
 
         public int SelectedId { get; set; }
 
@@ -46,6 +47,10 @@ namespace BlazorSignalRBelgianCavesRegister.Client.Pages.Bibliographies
                     BibliographyList = JsonConvert.DeserializeObject<List<BibliographyModel>>(json);
                 }
             }
+        }
+        public List<BibliographyModel> FilterBibliographyBySiteId(int siteId)
+        {
+            return BibliographyList = BibliographyList.Where(bi => bi.Site_Id == siteId).ToList();
         }
     }
 }

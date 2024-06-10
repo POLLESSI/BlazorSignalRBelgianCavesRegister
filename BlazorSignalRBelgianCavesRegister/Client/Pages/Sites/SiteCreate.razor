@@ -1,7 +1,7 @@
 ﻿<h3>Site Create</h3>
 
 <EditForm Model="siteform" OnSubmit="submit" class="form-control">
-    <div>
+   <div>
         <label>Site Name : </label>
         <InputText @bind-Value="siteform.Site_Name"></InputText>
     </div>
@@ -32,22 +32,6 @@
     <div>
         <label>Practical Information : </label>
         <InputText @bind-Value="siteform.PracticalInformation"></InputText>
-    </div>
-    <div>
-        <label>Id Lambda Data : </label>
-        <InputNumber @bind-Value="siteform.DonneesLambda_Id"></InputNumber>
-    </div>
-    <div>
-        <label>Id Owner : </label>
-        <InputNumber @bind-Value="siteform.NOwner_Id"></InputNumber>
-    </div>
-    <div>
-        <label>Id Scientific Data : </label>
-        <InputNumber @bind-Value="siteform.ScientificData_Id"></InputNumber>
-    </div>
-    <div>
-        <label>Id Bibliography : </label>
-        <InputNumber @bind-Value="siteform.Bibliography_Id"></InputNumber>
     </div>
     <button type="submit" button="btn btn-success">Submit</button>
 </EditForm>

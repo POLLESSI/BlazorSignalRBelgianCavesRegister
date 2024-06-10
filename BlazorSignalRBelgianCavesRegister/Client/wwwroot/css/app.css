@@ -2,15 +2,19 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: indigo;
-    /*background-image: "spéléo1.jpg";*/
+    background-color: white;
+    background-image: url("speleo1.jpg");
+    /*width: 250px;*/
+    /*height: 250px;*/
 }
 
 h1:focus {
     outline: none;
 }
 h2 {
-    color: olive;
+    color: #213921;
+    margin-top: 21%;
+    margin-right: auto;
 }
 h4 {
     color: red;
@@ -18,6 +22,12 @@ h4 {
 
 a, .btn-link {
     color: #0071c1;
+}
+
+.app {
+    background-color: orangered;
+    position: absolute;
+    left: 250px
 }
 
 .btn-primary {

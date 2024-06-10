@@ -1,0 +1,33 @@
+﻿@page "/chat"
+@using BlazorSignalRBelgianCavesRegister.Client.Models
+
+<h3>Chat List</h3>
+<table>
+    <tr>
+        <th>Content</th>
+        <th>Author</th>
+        <th>Site Id</th>
+        <th></th>
+    </tr>
+    @foreach (Message ch in ChatList)
+    {
+        <tr>
+            <td>@ch.Content</td>
+            <td>@ch.Author</td>
+            <td>@ch.Site_Id</td>
+            <td><button class="btn btn-sm btn-outline-info" @onclick="() => ClickInfo(ch.Chat_Id)">Info</button></td>
+        </tr>
+    }
+</table>
+
+<hr />
+@if(SelectedChatId > 0)
+{
+    <ChatDetail Chat_Id="SelectedChatId"></ChatDetail>
+}
+
+<hr />
+
+@code {
+
+}

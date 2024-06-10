@@ -8,9 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Pages\Pictures\Spéléo1.jpg" />
-    <Content Include="Pages\Pictures\Spéléo2.jpg" />
-    <Content Include="Pages\Pictures\Spéléo3.jpg" />
+    <None Include="wwwroot\Pictures\Speleo1.jpg" />
+    <None Include="wwwroot\Pictures\Speleo2.jpg" />
+    <None Include="wwwroot\Pictures\Speleo3.jpg" />
   </ItemGroup>
 
   <ItemGroup>

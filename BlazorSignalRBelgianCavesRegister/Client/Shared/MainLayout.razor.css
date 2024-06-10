@@ -2,14 +2,18 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    background-image: url("wwwroot/pictures/speleo1.jpg");
+    
 }
-
 main {
     flex: 1;
+    
 }
+
 
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    
 }
 
 .top-row {

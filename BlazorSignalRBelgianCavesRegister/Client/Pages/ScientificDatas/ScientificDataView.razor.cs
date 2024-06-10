@@ -8,6 +8,7 @@ namespace BlazorSignalRBelgianCavesRegister.Client.Pages.ScientificDatas
 {
     public partial class ScientificDataView
     {
+    #nullable disable
         [Inject]
         public HttpClient Client { get; set; }
         public HubConnection hubConnection { get; set; }
@@ -38,6 +39,10 @@ namespace BlazorSignalRBelgianCavesRegister.Client.Pages.ScientificDatas
                     ScientificDataList = JsonConvert.DeserializeObject<List<ScientificDataModel>>(json);
                 }
             }
+        }
+        public List<ScientificDataModel> FilterScientificDataBySiteId(int site_Id)
+        {
+            return ScientificDataList = ScientificDataList.Where(sc => sc.Site_Id == site_Id).ToList();
         }
     }
 }

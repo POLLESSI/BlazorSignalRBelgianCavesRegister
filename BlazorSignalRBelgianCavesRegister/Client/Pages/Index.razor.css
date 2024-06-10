@@ -3,9 +3,6 @@
     position: absolute;
     top: 500%;
 }
-body {
-    background: url("Pictures/Spéléo1.jpg") fixed no-repeat center;
-}
 
 h1 {
     position: relative;
@@ -27,13 +24,22 @@ strong {
     background-color: darkseagreen;
     color: darkorange;
     font-family: Algerian;
-    font-size: div
+    font-size: x-small;
+}
 
-{
+h1 strong {
     font-size: 60px
 }
 
-;
+div {
+    background: url("Pictures/Speleo2.jpg") fixed no-repeat center;
+    width: 500px;
+    height: auto;
+}
+
+img {
+    width: 800px;
+    height: 500px;
 }
 
 SurveyPrompt {
@@ -66,7 +72,7 @@ button {
     color: antiquewhite;
     width: 200px;
     height: 45px;
-    border-radius: 10px, 5px, 10px, 5px;
+    /*border-radius: 10px, 5px, 10px, 5px;*/
     box-shadow: 6px 6px 6px black inset;
     text-shadow: 2px 2px 4px black;
     text-align: justify;

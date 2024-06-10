@@ -1,7 +1,22 @@
-﻿<h3>Site Detail</h3>
+﻿@page "/sitedetail"
+
+@using BlazorSignalRBelgianCavesRegister.Client.Pages.LambdaDatas
+@using BlazorSignalRBelgianCavesRegister.Client.Pages.NOwners
+@using BlazorSignalRBelgianCavesRegister.Client.Pages.ScientificDatas
+@using BlazorSignalRBelgianCavesRegister.Client.Pages.Bibliographies
+@using BlazorSignalRBelgianCavesRegister.Client.Pages.Chats
+
+@inject LambdaDataView lambdaDataView
+@inject NOwnerView nOwnerView
+@inject ScientificDataView scientificDataView
+@inject BibliographyView bibliographyView
+@inject ChatView chatView
+
+<h3>Site Detail</h3>
 
 @if (CurrentSite is not null)
 {
+
     <p>Site Name : @CurrentSite.Site_Name</p>
     <p>Site Description : @CurrentSite.Site_Description</p>
     <p>Latitude : @CurrentSite.Latitude</p>
@@ -10,12 +25,71 @@
     <p>Depth : @CurrentSite.Depth</p>
     <p>Access Requirement : @CurrentSite.AccessRequirement</p>
     <p>Practical Information : @CurrentSite.PracticalInformation</p>
-    <p>Lambda Data Id : @CurrentSite.DonneesLambda_Id</p>
-    <p>Id Owner : @CurrentSite.NOwner_Id</p>
-    <p>Id Scientific Data : @CurrentSite.ScientificData_Id</p>
-    <p>Id Bibliography : @CurrentSite.Bibliography_Id</p>
+
+    <hr />
+
+    <button class="btn btn-sm btn-outline-info" @onclick="() => LambdaDataInfo() ">Lambda Data</button>
+    <button class="btn btn-sm btn-outline-info" @onclick="() => ScientificDataInfo()">Scientific Data</button>
+    <button class="btn btn-sm btn-outline-info" @onclick="() => BibliographyInfo()">Bibliographies</button>
+    <button class="btn btn-sm btn-outline-info" @onclick="() => NOwnerInfo()">Owners Data</button>
+    <button class="btn btn-sm btn-outline-info" @onclick="() => ChatInfo()">Forum</button>
+
+    @if (FilteredLambdaDataList.Any())
+    {
+        <h4>Lambda Datas from @CurrentSite.Site_Name</h4>
+        <ul>
+            @foreach (var la in FilteredLambdaDataList)
+            {
+                <li>@la.Localisation</li>
+                <li>@la.Topo</li>
+                <li>@la.Acces</li>
+                <li>@la.EquipementSheet</li>
+                <li>@la.PracticalInformation</li>
+                <li>@la.Description</li>
+            }
+        </ul>
+    }
+
+    @if (FilteredNOwnerList.Any())
+    {
+        <h4>Owner from @CurrentSite.Site_Name</h4>
+        <ul>
+            @foreach (var no in FilteredNOwnerList)
+            {
+                <li>@no.Status</li>
+                <li>@no.Agreement</li>
+                <li>@no.Site_Id</li>
+            }
+        </ul>
+    }
+    @if (FilteredScientificDataList.Any())
+    {
+        <h4>Scientific datas from @CurrentSite.Site_Name</h4>
+        <ul>
+            @foreach (var sc in FilteredScientificDataList)
+            {
+                <li>@sc.DataType</li>
+                <li>@sc.DetailsData</li>
+                <li>@sc.ReferenceData</li>
+            }
+        </ul>
+    }
+    @if (FilteredBibliographyList.Any())
+    {
+        <h4>Bibliographies from @CurrentSite.Site_Name</h4>
+        <ul>
+            @foreach (var bi in FilteredBibliographyList)
+            {
+                <li>@bi.Title</li>
+                <li>@bi.Author</li>
+                <li>@bi.ISBN</li>
+                <li>@bi.DataType</li>
+                <li>@bi.Detail</li>
+            }
+        </ul>
+    }
 }
 
 @code {
-
+    
 }

@@ -1,0 +1,20 @@
+﻿<h3>Chat Create</h3>
+<EditForm Model="chatForm" OnSubmit="submit" class="form-control">
+    <div class="form-control-sm">
+        <label>Content : </label>
+        <InputText @bind-Value="chatForm.Content"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Author : </label>
+        <InputText @bind-Value="chatForm.Author"></InputText>
+    </div>
+    <div class="form-control-sm">
+        <label>Site_Id : </label>
+        <InputNumber @bind-Value="chatForm.Site_Id"></InputNumber>
+    </div>
+    <button type="submit" button="btn btn-success">Submit</button>
+</EditForm>
+
+@code {
+
+}

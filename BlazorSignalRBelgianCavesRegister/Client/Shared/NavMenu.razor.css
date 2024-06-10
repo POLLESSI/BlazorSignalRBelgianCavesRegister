@@ -1,9 +1,33 @@
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 0.1);
+    background-image: url("wwwroot/pictures/speleo3.jpg")
 }
 .container-fluid a {
     color: red;
 }
+.conteneur {
+    background-color: orangered;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    gap: 10px;
+}
+div {
+    
+    position: absolute;
+    left: 250px
+}
+
+.une {
+    grid-column: 1 / 4;
+}
+
+.deux {
+    grid-row: 2 / 4;
+}
+/*.box {
+    height: 150px;
+}*/
 
 .top-row {
     height: 3.5rem;

@@ -15,7 +15,7 @@ namespace BlazorSignalRBelgianCavesRegister.Client.Pages.LambdaDatas
         {
             await GetLambdaData();
         }
-
+        
 
         private async Task GetLambdaData()
         {
