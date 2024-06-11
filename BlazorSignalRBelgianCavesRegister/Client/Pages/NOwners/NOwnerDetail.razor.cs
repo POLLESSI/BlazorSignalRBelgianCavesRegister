@@ -7,6 +7,7 @@ namespace BlazorSignalRBelgianCavesRegister.Client.Pages.NOwners
     public partial class NOwnerDetail
     {
         [Inject]
+        #nullable disable
         public HttpClient Client { get; set; }
         public NOwnerModel CurrentNOwner { get; set; }
         [Parameter]

@@ -5,12 +5,14 @@
 <table class="table table-striped table-bordered">
     <tr>
         <th>Status</th>
+        <th>NPerson_Id</th>
         <th></th>
     </tr>
     @foreach (NOwnerModel no in NOwnerList)
     {
         <tr>
             <td>@no.Status</td>
+            <td>@no.NPerson_Id</td>
             <td><button class="btn btn-sm btn-outline-info" @onclick="() => ClickInfo(no.NOwner_Id)">Info</button></td>
         </tr>
     }

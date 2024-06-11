@@ -9,7 +9,11 @@
         <InputText @bind-Value="nownerform.Agreement"></InputText>
     </div>
     <div class="form-control-sm">
-        <label>Id Site : </label>
+        <label>Person Id : </label>
+        <InputNumber @bind-Value="nownerform.NPerson_Id"></InputNumber>
+    </div>
+    <div class="form-control-sm">
+        <label>Site Id : </label>
         <InputNumber @bind-Value="nownerform.Site_Id"></InputNumber>
     </div>
     <button type="submit" button="btn btn-success">Submit</button>
