@@ -6,6 +6,7 @@ namespace BlazorSignalRBelgianCavesRegister.Client.Pages.LambdaDatas
 {
     public partial class LambdaDataDetail
     {
+    #nullable disable
         [Inject]
         public HttpClient Client { get; set; }
         public LambdaDataModel CurrentLambdaData { get; set; }

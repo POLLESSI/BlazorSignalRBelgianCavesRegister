@@ -6,6 +6,7 @@ namespace BlazorSignalRBelgianCavesRegister.Client.Pages.Chats
 {
     public partial class ChatDetail
     {
+    #nullable disable
         [Inject]
         public HttpClient Client { get; set; }
         public Message CurrentChat { get; set; }
